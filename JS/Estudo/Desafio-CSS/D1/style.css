@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+    background-image: linear-gradient(to right, #433DA0, #4EC3C9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 10px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    color: #fff;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 50px;
+}
+
+.center h1 {
+    font-size: 120px;
+    font-weight: bold;
+}
+
+.center h3 {
+    font-size: 30px;
+    margin-top: -100px;
+    text-align: center;
+}
+
+.center p {
+    text-align: center;
+    margin-top: -25px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            transition: background-color 0.5s, color 0.5s;
+            font: normal 20pt Arial;
+            text-align: center;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .toggle-btn {
+            position: fixed;
+            top: 300px;
+            left: 625px;
+        }
+    </style>
+</head>
+<body>
+    <div id="message"><h1>Olá Mundo</h1></div>
+
+    <button class="toggle-btn" onclick="toggleTheme()">Alternar tema</button>
+
+    <script>
+        function toggleTheme() {
+            var body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
