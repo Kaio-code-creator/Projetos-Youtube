@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box;
+}
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: #fff;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mask {
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    top: 240px;
+    left: 25%;
+    background: #edb369;
+    animation: 8s ground alternate infinite linear;
+}
+
+.sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #80d2e7;
+    background-image: radial-gradient(transparent, #356595);
+    animation: 8s sky infinite linear;
+}
+
+.stars {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 300px;
+	background-image: 
+    radial-gradient(2px 2px at 10% 15%, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 20% 35%, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 25% 80%, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 45% 20%, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 65% 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(3px 3px at 5% 80%, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 80% 60%, #ddd, rgba(0,0,0,0));
+	background-size: 50% 20%;
+	background-position: 50% 0;
+	animation: 8s stars infinite linear;
+	transform-origin: top;
+}
+
+.sun-moon {
+    position: absolute;
+    opacity: 100%;
+    width: 400px;
+    height: 400px;
+    top: 100px;
+    left: 0;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    animation: 8s sun-moon infinite linear;
+}
+
+.sun, .moon {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.sun {
+    box-shadow: 0 0 8px rgba(255,255,255,0.3);
+    background: radial-gradient(#d9e8cc, #efe0b1);
+}
+
+.moon {
+    background: radial-gradient(circle at 80% 50%, transparent 13px, #efe0b1 14px);
+    animation: 8s moon infinite linear;
+}
+
+.pyramid {
+    position: absolute;
+    top: 180px;
+    left: 140px;
+    width: 120px;
+    height: 60px;
+}
+
+.pyramid.left {
+    clip-path: polygon(50% 0%, 0% 100%, 70% 100%);
+    background: #f1aa50;
+    animation: 8s pyleft infinite linear;
+}
+
+.pyramid.right {
+	clip-path: polygon(50% 0%, 69% 100%, 100% 100%);
+	background: #bc6305;
+	animation: 8s pyright infinite linear;
+}
+
+.shadow {
+    position: absolute;
+    width: 100%;
+    height: 160px;
+    top: 240px;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+    clip-path: polygon(140px 0, 260px 0, 50% 10%);
+    animation: 8s shadow infinite linear;
+}
+
+@keyframes stars {
+    from {
+    transform: rotate(0deg);
+    opacity: 0;
+}
+35% {
+    opacity: 0%;
+}
+50% {
+    opacity: 60%;
+}
+65% {
+    opacity: 0%;
+}
+to {
+    transform: rotate(300deg);
+    opacity: 0;
+}
+}
+
+@keyframes ground {
+	from {
+		background-color: #edb369;
+	}
+	25% {
+		background-color: #2d2d2a;
+	}
+	50% {
+		background-color: #5d584f;
+	}
+	75% {
+		background-color: #2d2d2a;
+	}
+	to {
+		background-color: #edb369;
+	}
+}
+
+@keyframes sun-moon {
+	from {
+		transform: rotate(0);
+		height: 200px;
+	}
+	25% {
+		height: 500px;
+	}
+	50% {
+		height: 200px;
+	}
+	75% {
+		height: 500px;
+	}
+	to {
+		transform: rotate(360deg);
+		height: 200px;
+	}
+}
